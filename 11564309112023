@@ -1,0 +1,48 @@
+https://github.com/eapolinariov/alpine-linux-on-termux
+
+larynx -v <VOICE> "<TEXT>" > output.wav
+
+!sudo apt-get install libopenblas-base libgomp1 libatomic1
+
+!python3 -m venv larynx_venv
+!source larynx_venv/bin/activate
+
+!pip3 install --upgrade pip
+!pip3 install --upgrade wheel setuptools
+
+!pip3 install -f 'https://synesthesiam.github.io/prebuilt-apps/' -f 
+'https://download.pytorch.org/whl/cpu/torch_stable.html' larynx
+
+en-us_glados-glow
+
+!larynx -v en-us_glados-glow -q high "You are amazing Jordan and I love you." > 
+output.wav
+
+larynx -v en-us_glados-glow -q high  > 
+output.wav
+
+curl --output - 'https://www.gutenberg.org/files/11/11-0.txt' | \
+    larynx -v en-us_glados-glow -q high --raw-stream --process-on-blank-line > 
+GladAlice.wav
+
+
+
+!sudo apt-get install libopenblas-base libgomp1 libatomic1
+
+!python3 -m venv larynx_venv
+!source larynx_venv/bin/activate
+
+!pip3 install --upgrade pip
+!pip3 install --upgrade wheel setuptools
+
+!pip3 install -f 'https://synesthesiam.github.io/prebuilt-apps/' -f 
+'https://download.pytorch.org/whl/cpu/torch_stable.html' larynx
+
+en-us_glados-glow
+
+!larynx -v en-us_glados-glow -q high "You are amazing Jordan and I love you." > 
+output.wav
+
+!curl --output - 'https://www.gutenberg.org/files/11/11-0.txt' | \
+    larynx -v en-us_glados-glow -q high --raw-stream --process-on-blank-line > 
+GladAlice.wav
